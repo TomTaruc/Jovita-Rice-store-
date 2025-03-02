@@ -1,0 +1,164 @@
+ html, body {
+	height:100%;
+	margin:0;
+	padding:0;
+	}
+
+body {
+	display: flex;
+	flex-direction: column;
+	}
+	
+.navbar {
+    background-color: #228B22;
+    }
+		
+.navbar-brand {
+	width: 60px;
+	height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #228B22;
+    display: inline-block;
+    }
+	
+.navbar-brand img {
+	width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    } 
+	
+.navbar-nav .nav-link {
+    color: white !important;
+    } 
+	
+.rice-banner {
+	width: 100%;
+	height: 200px;
+	object-fit:cover;
+	object-position: center;
+	}
+
+.prem-container {
+    display: flex;
+	flex:1;
+    justify-content: center;
+    gap: 30px;
+	}
+
+.prem {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: 275px;
+    border: 3px solid #BC9773;
+    text-align: center;
+    padding: 10px;
+	border-radius:15%;
+	}
+	
+.prem:hover {
+	background-color: #F5F5DC;
+	transition:  background-color 0.3s ease;
+	}
+	
+.premium-logo {
+	height:auto;
+	width: 40%;
+	}
+
+.text-over-img {
+	position: relative;
+	display:inline-block;
+	width:100%;
+	}
+	
+.overlay-text {
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color:white;
+	-webkit-text-stroke: 3px black;
+	font-size:75px;
+	font-weight:bold;
+	text-align:center;
+	}
+
+.aboverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    }
+	
+.prem-over {
+	height: 500px;
+	width: 750px;
+	background-color: #F5F5DC;
+	border: 5px solid #BC9773;
+	border-radius: 5%;
+	display: none;
+	flex-direction: row;
+	gap: 20px;
+	padding: 20px;
+	align-items: center;
+	}
+
+.tab-content {
+	display: flex; 
+	flex-direction: column; 
+	align-items: center; 
+	width: 100%;
+	}
+	
+.tab-pane {
+    display: none;
+	height: 350px;
+}
+
+.tab-pane.active {
+    display: flex !important; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.nav-tabs {
+    background-color: #f5e6d0;
+    border-bottom: 2px solid #bc9773;
+}
+
+.nav-tabs .nav-link {
+    color: #7a4e2d;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px 10px 0 0;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #bc9773;
+    color: #fdfbf7;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: #e0c3a3;
+    color: #5c3821;
+}
+
+	
+footer {
+	width:100%;
+    background-color: #228B22;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    }

@@ -3,26 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page - Jovita's Rice Store</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Welcome to Jovita's Rice Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> 
     <style>
         body {
             background-color: #fff;
             color: #333;
             font-family: Arial, sans-serif;
         }
-
+        /* Green top bar */
         .top-bar {
             background-color: #4CAF50;
             color: white;
             text-align: center;
             padding: 10px 0;
         }
-
         .navbar {
-            background-color: #228B22;
+            background-color: #228B22; 
         }
-
         .navbar-brand {
             width: 60px;
             height: 60px;
@@ -31,47 +29,24 @@
             border: 2px solid #6B4F1B;
             display: inline-block;
         }
-
         .navbar-brand img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 50%;
         }
-
         .navbar-nav .nav-link {
             color: white !important;
-            position: relative;
         }
-
-        .navbar-nav .nav-link + .nav-link::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            height: 70%;
-            border-left: 1px solid white;
-        }
-
+        /* Hero Section */
         .hero-section {
             background-image: url('https://assets.bonappetit.com/photos/5e20c52552062d000910a5d7/16:9/w_2560%2Cc_limit/Basically-Rice.jpg');
             background-size: cover;
-            background-position: left center;
+            background-position: left center; /* Align to the left */
             position: relative;
             padding: 80px 0;
             color: white;
         }
-
-        .hero-section p {
-            font-size: 1.2em;
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4), -2px -2px 5px rgba(255, 255, 255, 0.2);
-            background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.4), rgba(139, 69, 19, 0.4));
-            padding: 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-
         .hero-section::after {
             content: '';
             position: absolute;
@@ -79,33 +54,26 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(139, 69, 19, 0.4);
+            background-color: rgba(139, 69, 19, 0.4); /* Lightened overlay */
         }
-
         .hero-section .container {
             position: relative;
             z-index: 1;
             text-align: center;
         }
-
         .section-title {
-            color: white;
+            color: white; /* Changed to white */
             font-weight: bold;
-            font-size: 60px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            display: inline-block;
+            font-size: 40px; /* Increased font size */
+            text-transform: uppercase; /* Make it all uppercase for a bolder look */
+            letter-spacing: 2px; /* Added some spacing to the letters */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Added text shadow for readability */
         }
-
         .product-section, .services-section {
             padding: 50px 20px;
             text-align: center;
-            background-color: #F5F5F5;
+            background-color: #F5F5F5; /* Light grey background */
         }
-
         .product-card {
             border: 3px solid #6B4F1B;
             border-radius: 10px;
@@ -115,19 +83,16 @@
             flex-direction: column;
             justify-content: space-between;
         }
-
         .product-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
         }
-
         .product-card-body {
             padding: 15px;
             background-color: #fff;
             text-align: left;
         }
-
         .btn-custom {
             background-color: #6B4F1B;
             color: white;
@@ -135,140 +100,78 @@
             border-radius: 5px;
             border: none;
         }
-
         .btn-custom:hover {
             background-color: #4B3B24;
         }
-
         .footer {
             background-color: #228B22;
             color: white;
             text-align: center;
             padding: 20px;
         }
-
+        /* Image Map Style */
         .image-map {
             width: 100%;
             height: auto;
             cursor: pointer;
-            border: 3px solid #6B4F1B;
+            border: 3px solid #6B4F1B; /* Brown border */
             border-radius: 10px;
         }
-
+        /* Image carousel style */
         .carousel-item img {
             width: 100%;
             height: auto;
         }
+        /* Table Styling */
+		.testimonial-title {
+		color: black;              /* Set the color to black */
+		text-transform: uppercase; /* Make text all caps */
+		text-align: center;    
+		font-weight: bold;
+		}
 
-        .testimonial-title {
-            color: black;
-            text-transform: uppercase;
-            text-align: center;
-            font-weight: bold;
-        }
+		.testimonial-table {
+			border-radius: 10px;
+			border: 2px solid #6B4F1B;
+			background-color: #FAF3E0; /* Light brown shade */
+			width: 100%; /* Make sure the table spans the width */
+			table-layout: fixed; /* Ensures columns are evenly spaced */
+		}
 
-        .testimonial-table {
-            border-radius: 10px;
-            border: 2px solid #6B4F1B;
-            background-color: #228B22;
-            width: 100%;
-            table-layout: fixed;
-        }
+		.testimonial-table th, .testimonial-table td {
+			padding: 10px; /* Reduced padding for a more compact table */
+			text-align: center;
+			border-bottom: 1px solid #6B4F1B; /* Adding a subtle border under each cell for better separation */
+			font-size: 0.95em; /* Slightly reduced font size for a more compact look */
+		}
 
-        .testimonial-table th, .testimonial-table td {
-            padding: 10px;
-            text-align: center;
-            border-bottom: 1px solid #6B4F1B;
-            font-size: 0.95em;
-        }
+		.testimonial-table th {
+			background-color: #6B4F1B;
+			color: white;
+			font-size: 1.1em; /* Slightly smaller font size for the header */
+			font-weight: bold; /* Ensure bold header text */
+			text-transform: uppercase; /* Make it uppercase for consistency */
+			letter-spacing: 1px; /* Slight letter-spacing for better readability */
+		}
 
-        .testimonial-table th {
-            background-color: #6B4F1B;
-            color: white;
-            font-size: 1.1em;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+		.testimonial-table td {
+			background-color: #FFF;
+			font-size: 0.95em; /* Adjust font size for readability */
+		}
 
-        .testimonial-table td {
-            background-color: #FFF;
-            font-size: 0.95em;
-        }
 
+        /* Styling for the "Tap one" text */
         .tap-text {
             background-color: #6B4F1B;
             color: white;
             padding: 10px 20px;
-            border-radius: 25px;
+            border-radius: 25px; /* Restored the rounded style */
             margin-top: 10px;
-        }
-
-     
-        @media screen and (max-width: 768px) {
-            .hero-section h1 {
-                font-size: 2em;
-            }
-
-            .section-title {
-                font-size: 36px;
-            }
-
-            .navbar {
-                padding: 10px 0;
-            }
-
-            .navbar-nav .nav-link {
-                font-size: 1rem;
-            }
-
-            .product-card {
-                margin: 15px 0;
-                flex-direction: column;
-            }
-
-            .product-card img {
-                height: 150px;
-            }
-
-            .testimonial-table th, .testimonial-table td {
-                font-size: 0.85em;
-            }
-
-            .footer {
-                padding: 10px;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .hero-section {
-                padding: 60px 0;
-            }
-
-            .product-card {
-                margin: 10px 0;
-            }
-
-            .testimonial-title {
-                font-size: 1.2em;
-            }
-
-            .navbar-nav .nav-link {
-                font-size: 0.9rem;
-            }
-
-            .navbar-toggler {
-                font-size: 18px;
-            }
-
-            .image-map {
-                width: 100%;
-                height: auto;
-            }
         }
     </style>
 </head>
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#home">
@@ -280,43 +183,42 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="homepage.html">Home </a>
+                        <a class="nav-link active" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Products.html">Products</a>
+                        <a class="nav-link" href="#products">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Services.html">Services</a>
+                        <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="missionvision.html">About Us</a>
                     </li>
-                  
                     <li class="nav-item">
-                        <a class="nav-link" href="recipes.html">Recipes</a>
-                    </li>
-					  <li class="nav-item">
-                        <a class="nav-link" href="Why Choose Us.html">Why Choose Us</a>
+                        <a class="nav-link" href="#recipes">Recipes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="FAQ.html">FAQs</a>
+                        <a class="nav-link" href="#faq">FAQs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contactus.html">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section id="home" class="hero-section">
         <div class="container">
-            <h1 class="section-title">Welcome to Jovita's Rice Store</h1>
+            <h2 class="section-title">Jovita Rice Store: Quality Rice, Every Grain</h2>
         </div>
     </section>
 
+    <!-- Products Section -->
     <div class="container mt-5">
         <div class="row">
+            <!-- Image Map Section (Left Side) -->
             <div class="col-md-6">
                 <div class="img-container">
                     <img src="publicmarket.jpg" alt="Tap on the Image for More" class="image-map" usemap="#rice-map">
@@ -326,9 +228,10 @@
                         <area shape="rect" coords="8, 336, 489, 492" alt="Imported Vietnam Rice" href="makatimap.html">
                     </map>
                     <p class="text-center tap-text"><strong>Tap one and you can see our branches here in Metro Manila!</strong></p>
-                    <hr>
+					<hr>
                 </div>
 
+                <!-- Table Section for Testimonials -->
                 <div class="info-section mt-4">
                     <h2 class="testimonial-title">Customer Testimonials</h2>
                     <table class="table testimonial-table">
@@ -348,7 +251,7 @@
                                 <td>8</td>
                             </tr>
                             <tr>
-                                <td>"Sinandomeng from Jovita Rice Market is just so perfect for my daily meals!"</td>
+                                <td>"Mahal ko ang Sinandomeng, perfect for my daily meals!"</td>
                                 <td>10</td>
                             </tr>
                             <tr>
@@ -359,47 +262,54 @@
                                 <td>"Maganda yung quality ng rice na natikman ko! Highly recommend!"</td>
                                 <td>10</td>
                             </tr>
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="product-card">
-                            <img src="brownrice.jpg" alt="Texas Sinandomeng">
-                            <div class="product-card-body">
-                                <h5>Brown Rice</h5>
-                                <p>Brown rice is known for its distinct aroma and soft texture. A favorite among Filipino households especially because of its healthy components.</p>
+                <!-- Products List on the Right -->
+                <div class="col-md-6">
+                    <div class="row">
+                        <!-- Texas Sinandomeng -->
+                        <div class="col-md-12">
+                            <div class="product-card">
+                                <img src="brownrice.jpg" alt="Texas Sinandomeng">
+                                <div class="product-card-body">
+                                    <h5>Brown Rice</h5>
+                                    <p>Brown rice is known for its distinct aroma and soft texture. A favorite among Filipino households especially because of its healthy components.</p>
+                                 
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-md-12">
-                        <div class="product-card">
-                            <img src="thairice.jpg" alt="Imported Thailand Rice">
-                            <div class="product-card-body">
-                                <h5>Basmati Rice</h5>
-                                <p>Imported directly from India, this premium rice offers a perfect balance of flavor and fragrance.</p>
+                        <!-- Imported Thailand Rice -->
+                        <div class="col-md-12">
+                            <div class="product-card">
+                                <img src="thairice.jpg" alt="Imported Thailand Rice">
+                                <div class="product-card-body">
+                                    <h5>Imported Thailand Rice</h5>
+                                    <p>Imported directly from Thailand, this premium rice offers a perfect balance of flavor and fragrance.</p>
+                                  
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-md-12">
-                        <div class="product-card">
-                            <img src="jasminerice.jpg" alt="Imported Vietnam Rice">
-                            <div class="product-card-body">
-                                <h5>Premium</h5>
-                                <p>Known for its superior quality, it is perfect for making traditional and modern dishes.</p>
+                        <!-- Imported Vietnam Rice -->
+                        <div class="col-md-12">
+                            <div class="product-card">
+                                <img src="jasminerice.jpg" alt="Imported Vietnam Rice">
+                                <div class="product-card-body">
+                                    <h5>Imported Vietnam Rice</h5>
+                                    <p>Known for its superior quality, Imported Vietnam Rice is perfect for making traditional and modern dishes.</p>
+                                   
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2025 Jovita's Rice Store | All Rights Reserved | Made by: Tom Taruc</p>
     </footer>

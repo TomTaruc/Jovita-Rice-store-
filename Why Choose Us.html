@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang = "en US">
+<head>
+	<meta charset = "UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href = "stylesChooseUs.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<title>Why Choose Us - Jovita Rice Store</title>
+	    <style>
+        .navbar-nav .nav-link {
+            font-family: "Arial", sans-serif;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home">
+                <img src="jovitalogo.jpg" alt="Jovita's Rice Store Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="missionvision.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recipes.html">Recipes</a>
+                    </li>
+					  <li class="nav-item">
+                        <a class="nav-link" href="Why Choose Us.html">Why Choose Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQ.html">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	<img src="header-banner-rice-bags.jpg" class="rice-banner">
+	</header>
+	<br>
+	
+	<h2 style="text-align: center;">Premium Quality Rice at the Best Prices – Direct from Farmers to You!</h2><br>
+	
+	
+	<!-- Clickable Buttons-->
+	<div class="prem-container">
+	<div class="prem" onclick="showOverlay('premium')">
+			<img src="grain-rice-icon.png" class="premium-logo"><br>
+			<h5 class="why">High-Quality & Fresh Rice</h5>
+			100% organic and chemical-free rice options available.
+	</div>
+	
+	<div class="prem" onclick="showOverlay('affordable')">
+		<img src="afford-icon.png" class="premium-logo">
+		<h5 class="why">Affordable & Competitive Pricing</h5>
+		We offer the best value for your money—high quality at affordable prices!
+	</div>
+	
+	<div class="prem" onclick="showOverlay('variety')">
+		<img src="variety.png" class="premium-logo">
+		<h5 class="why">Wide Variety of Rice Options</h5>
+		We have a wide selection, from well-milled rice, brown rice, sticky rice, and fragrant jasmine rice.
+	</div>
+	
+	<div class="prem" onclick="showOverlay('trust')">
+		<img src="trust.png" class="premium-logo"><br>
+		<h5 class="why">Trusted by the Community</h5>
+		Serving happy customers for over 40 years!
+	</div>
+	
+	<div class="prem" onclick="showOverlay('rely')">
+		<img src="reliable.png" class="premium-logo">
+		<h5 class="why">Convenient & Reliable Service</h5>
+		Our store is easily accessible, and we offer bulk orders for businesses.
+	</div>
+	</div><br><br>
+	
+	<div id="overlay" class="aboverlay" onclick="hideOverlay()">
+		<div id="premium-overlay" class="prem-over" onclick="event.stopPropagation()">
+			<img src="grain-rice-icon.png" style="height:65%;width:auto;">
+			<p>At Jovita’s Rice Store, we take pride in offering only 
+			the highest quality and freshest rice, sourced directly from 
+			trusted local farmers. Our rice is 100% organic and completely 
+			free from harmful chemicals, ensuring that every grain you enjoy is 
+			safe, nutritious, and delicious. We believe in promoting sustainable 
+			agriculture and supporting farmers who use ethical and eco-friendly 
+			practices. Our carefully selected rice varieties are known for 
+			their rich aroma, soft texture, and superior taste — perfect for 
+			creating meals that your family will love. Choose Jovita’s for 
+			rice that’s not just food, but a commitment to health and quality.</p>
+		</div>
+		
+		<div id="afford-overlay" class="prem-over" onclick="event.stopPropagation()">
+			<img src="afford-icon.png" style="height:65%;width:auto;">
+			<p>At Jovita’s Rice Store, we believe that high-quality rice 
+			shouldn’t come with a high price tag. We work directly with local 
+			farmers, eliminating middlemen and ensuring fair pricing without 
+			compromising on quality. Our rice is not only organic and chemical-free 
+			but also priced competitively, so you get the best value for your money. 
+			Whether you’re buying in small quantities or bulk, you can trust 
+			us to offer premium rice at prices that suit your budget.</p>
+		</div>
+		
+		<div id="trust-overlay" class="prem-over" onclick="event.stopPropagation()">
+			<img src="trust.png" style="height:65%;width:auto;">
+			<p>With over 40 years of experience, Jovita’s Rice Store has earned 
+			the trust and loyalty of our community. Our commitment to providing 
+			fresh, premium-quality rice and exceptional service has made us a 
+			household name. We value the relationships we’ve built and continue 
+			to serve happy, satisfied customers across generations.</p>
+		</div>
+		
+		<div id="variety-overlay" class="prem-over" onclick="event.stopPropagation()">
+			<img src="variety.png" style="height:65%;width:auto;">
+			<p>At Jovita’s Rice Store, we offer a diverse selection of high-quality 
+			rice to suit every taste and cooking style. From well-milled white rice 
+			and nutrient-rich brown rice to sticky rice perfect for desserts and 
+			fragrant jasmine rice for aromatic dishes — our collection has something 
+			for everyone. Every grain is carefully sourced and handled to preserve its 
+			natural goodness and flavor.</p>
+		</div>
+		
+		<div id="rely-overlay" class="prem-over" onclick="event.stopPropagation()">
+			<img src="reliable.png" style="height:65%;width:auto;">
+			<p>At Jovita’s Rice Store, we offer a diverse selection of high-quality 
+			rice to suit every taste and cooking style. From well-milled white rice 
+			and nutrient-rich brown rice to sticky rice perfect for desserts and 
+			fragrant jasmine rice for aromatic dishes — our collection has something 
+			for everyone. Every grain is carefully sourced and handled to preserve its 
+			natural goodness and flavor.</p>
+		</div>
+	</div>
+	<script>
+		function showOverlay(option) {
+				document.getElementById('overlay').style.display = 'flex';
+				document.getElementById('premium-overlay').style.display = 'none';
+				document.getElementById('afford-overlay').style.display = 'none';
+				document.getElementById('variety-overlay').style.display = 'none';
+				document.getElementById('trust-overlay').style.display = 'none';
+				document.getElementById('rely-overlay').style.display = 'none';
+				
+				if (option == 'premium') {
+				document.getElementById('premium-overlay').style.display = 'flex';
+				}
+				
+				else if (option == 'affordable') {
+				document.getElementById('afford-overlay').style.display = 'flex';
+				}
+
+				else if (option == 'variety') {
+				document.getElementById('variety-overlay').style.display = 'flex';
+				}
+				
+				else if (option == 'trust') {
+				document.getElementById('trust-overlay').style.display = 'flex';
+				}
+				
+				else if (option == 'rely') {
+				document.getElementById('rely-overlay').style.display = 'flex';
+				}
+        }
+
+        function hideOverlay() {
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+	
+	<footer>
+        <p>&copy; 2025 Jovita's Rice Store | All Rights Reserved | Made by: Amit Bhojwani</p>
+    </footer>
+</body>
+</html>
